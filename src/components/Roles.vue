@@ -1,7 +1,7 @@
 <template>
   <div class="col-12 text-center">
     <div v-for="role in roles" :key="role.id">
-      <h1>{{ role.roleName }}</h1>
+      <h3>{{ role.roleName }}</h3>
     </div>
   </div>
 </template>

@@ -1,5 +1,5 @@
 <template>
-  <div class="container-fluid mt-2">
+  <div class="container">
     <h1>Bienvenido al dummy</h1>
     <div class="row">
       <router-view></router-view>

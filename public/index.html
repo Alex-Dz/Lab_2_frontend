@@ -15,6 +15,37 @@
     <title>Laboratorio</title>
   </head>
   <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="/">Iniciar sesión</a>
+    <span class="navbar-brand">| </span>
+    <a class="navbar-brand" href="/registro">Registro</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-item nav-link" href="/principal">Home</a>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownRoles" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Cursos
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownRoles">
+            <a class="nav-item nav-link" href="/mis-cursos">Mis cursos</a>
+            <a class="nav-item nav-link" href="/principal/nuevo-curso">Nuevo Curso</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownRoles" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Roles
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownRoles">
+            <a class="nav-item nav-link" href="/principal/roles">Mis roles</a>
+            <a class="nav-item nav-link" href="/principal/nuevo-rol">Nuevo Role</a>
+          </div>
+        </li>
+      </div>
+    </div>
+  </nav>
     <noscript>
       <strong>We're sorry but the app doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
     </noscript>
