@@ -31,6 +31,7 @@
 
 <script>
   import axios from 'axios';
+  import {getAuthenticationToken} from '@/dataStorage';
 
   export default {
     name: "AddRole",
@@ -57,12 +58,13 @@
     },
     methods: {
       associate( event ){
+        console.log(this.buildURI());
         axios
           .post( this.buildURI( ), {
               password: this.password
             }, {
               params: {
-                access_token: localStorage.getItem( "token" )
+                access_token: getAuthenticationToken(),
               }
             }
           ).then( response => {
@@ -80,7 +82,7 @@
               alert( "No es posible conectar con el backend en este momento" );
             }
           });
-        event.preventDefault( );
+        /*event.preventDefault( );*/
       },
       buildURI( ){
         let associatePath = "/registro/nuevo-rol/";
