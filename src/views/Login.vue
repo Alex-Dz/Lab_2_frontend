@@ -41,12 +41,18 @@
 <script>
     import axios from 'axios';
     import {setAuthenticationToken} from '@/dataStorage';
+    import {getAuthenticationToken} from '@/dataStorage';
 
     const path = "/oauth/token";
 
     export default {
         name: "Login.vue",
         components: {},
+        beforeCreate() {
+          if( getAuthenticationToken() ){
+            this.$router.push( {name: 'home'} )
+          }
+        },
         data(){
             return {
                 username: '',
